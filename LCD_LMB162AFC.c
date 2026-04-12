@@ -214,13 +214,13 @@ typedef struct LCD_LMB162AFC_Buffer_Transmit
     uint8_t Content[ LCD_LMB162AFC_BUFFER_SIZE_TRANSMIT ];
 } LCD_LMB162AFC_Buffer_Transmit_t;
 
-typedef struct LCD_LMB162AFC_Instance_Context
+typedef struct LCD_LMB162AFC_InstanceContext
 {
     LCD_LMB162AFC_Process_t Process;
     LCD_LMB162AFC_Operation_t Operation;
     LCD_LMB162AFC_Screen_t Screen;
     LCD_LMB162AFC_Buffer_Transmit_t Transmit;
-} LCD_LMB162AFC_Instance_Context_t;
+} LCD_LMB162AFC_InstanceContext_t;
 
 typedef struct LCD_LMB162AFC_Context
 {
@@ -1245,7 +1245,7 @@ static LCD_LMB162AFC_Status_t LCD_LMB162AFC_Instance_Initialize( LCD_LMB162AFC_I
             if ( LCD_LMB162AFC_Instance->Context == NULL )
             {
                 RAM_Status_t RAM_Status = RAM_Status_Error;
-                if ( ( RAM_Status = RAM_Allocate( RAM_1, ( RAM_Reference_t * ) &LCD_LMB162AFC_Instance->Context, UTIL_SizeOf( LCD_LMB162AFC_Instance_Context_t ) ) ) != RAM_Status_Success )
+                if ( ( RAM_Status = RAM_Allocate( RAM_1, ( RAM_Reference_t * ) &LCD_LMB162AFC_Instance->Context, UTIL_SizeOf( LCD_LMB162AFC_InstanceContext_t ) ) ) != RAM_Status_Success )
                 {
                     LCD_LMB162AFC_Status = LCD_LMB162AFC_Status_Error;
                     break;
@@ -1700,7 +1700,7 @@ LCD_LMB162AFC_Status_t LCD_LMB162AFC_SetDDRAM( LCD_LMB162AFC_Instance_t * LCD_LM
 // #### Public Variable(s) #####################################################
 // #############################################################################
 
-const char LCD_LMB162AFC_VERSION[] = "0.0.0.v20260117-1054";
+const char LCD_LMB162AFC_VERSION[] = "0.0.0.v20260412-1852";
 
 // #############################################################################
 // #### File Guard #############################################################

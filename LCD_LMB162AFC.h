@@ -383,7 +383,7 @@ extern "C"
 
     typedef uint8_t LCD_LMB162AFC_Character_t;
 
-    typedef struct LCD_LMB162AFC_Instance_Context LCD_LMB162AFC_Instance_Context_t;
+    typedef struct LCD_LMB162AFC_InstanceContext LCD_LMB162AFC_InstanceContext_t;
 
     typedef struct LCD_LMB162AFC_Instance
     {
@@ -393,7 +393,7 @@ extern "C"
         GPIO_t ReadWrite;
 
         // Managed internally !
-        LCD_LMB162AFC_Instance_Context_t * Context;
+        LCD_LMB162AFC_InstanceContext_t * Context;
     } LCD_LMB162AFC_Instance_t;
 
     // #############################################################################
